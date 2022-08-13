@@ -1,0 +1,56 @@
+CREATE TABLE student(name varchar(20),roll int);
+CREATE TABLE faculty(name varchar(20),fid int PRIMARY KEY);
+CREATE TABLE course(name varchar(20),cid varchar(10) );
+CREATE TABLE mapping(cid1 varchar(10),cid2 varchar(10),cid3 varchar(10),cid4 varchar(10),fid int,room varchar(5));
+CREATE TABLE register(roll int,fid int,cid varchar(10));
+CREATE TABLE tt(dayy varchar(10),p1 varchar(10),p2 varchar(10),p3 varchar(10),p4 varchar(10),p5 varchar(10),p6 varchar(10),p7 varchar(10),p8 varchar(10));
+
+
+INSERT INTO course values('Maths','M01');
+INSERT INTO course values('Physics','P01');
+INSERT INTO course values('Chemistry','C01');
+INSERT INTO course values('Python','P02');
+INSERT INTO course values('Cpp','C02');
+INSERT INTO course values('Java','J01');
+INSERT INTO course values('SE','S01');
+INSERT INTO course values('OS','O01');
+
+INSERT INTO faculty values('Dr Ramu',901);
+INSERT INTO faculty values('Dr Swetha',902);
+INSERT INTO faculty values('Dr Joshi',903);
+INSERT INTO faculty values('Dr Kiran Reddy',904);
+INSERT INTO faculty values('Dr Satyam',905);
+INSERT INTO faculty values('Dr Ramesh',906);
+INSERT INTO faculty values('Dr Rajesh',907);
+INSERT INTO faculty values('Dr Sonesh',908);
+INSERT INTO faculty values('Dr Kamal Reddy',909);
+INSERT INTO faculty values('Dr Rekha',9010);
+
+
+INSERT INTO mapping values('M01','C01','C02','S01',901,'h001');
+INSERT INTO mapping values('M01','C01','C02','S01',902,'h002');
+INSERT INTO mapping values('M01','C01','C02','S01',903,'h003');
+INSERT INTO mapping values('M01','C01','C02','S01',904,'h004');
+INSERT INTO mapping values('M01','C01','C02','S01',905,'h005');
+
+INSERT INTO mapping values('P01','P02','J01','O01',906,'h001');
+INSERT INTO mapping values('P01','P02','J01','O01',907,'h002');
+INSERT INTO mapping values('P01','P02','J01','O01',908,'h003');
+INSERT INTO mapping values('P01','P02','J01','O01',909,'h004');
+INSERT INTO mapping values('P01','P02','J01','O01',9010,'h005');
+
+INSERT INTO register values(1,901,'M01');
+INSERT INTO register values(1,902,'C01');
+INSERT INTO register values(1,903,'C02');
+INSERT INTO register values(1,904,'S01');
+INSERT INTO register values(1,906,'P01');
+INSERT INTO register values(1,908,'P02');
+INSERT INTO register values(1,909,'J01');
+INSERT INTO register values(1,9010,'O01');
+
+
+INSERT INTO tt values('mon','M01','P01','C01','P02','C02','J01','S01','O01');
+INSERT INTO tt values('tue','M01','P01','C01','P02','C02','J01','S01','O01');
+INSERT INTO tt values('wed','M01','P01','C01','P02','C02','J01','S01','O01');
+INSERT INTO tt values('thur','M01','P01','C01','P02','C02','J01','S01','O01');
+INSERT INTO tt values('fri','M01','P01','C01','P02','C02','J01','S01','O01');

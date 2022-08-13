@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Course Registration</title>
+</head>
+
+<style>
+
+    button,.submit{
+        background-color:skyblue;
+        color:black;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 10%;
+        opacity: 0.9;
+        border-radius:20px;
+    }
+
+    button,.submit:hover {
+        opacity: 1;
+    }
+
+
+    .b1{
+        border:6px solid black;
+        border-radius:20px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+</style>
+
+<body><br>
+<div class="b1">
+<center>
+<h1>Student Course Registration</h1>
+    <form action="/registered" method="POST">
+
+    <h3>rollnumber</h3>
+    <input type="number" name="num" required>
+    <h3>name</h3>
+    <input type="name" name="name" required>
+    <br>
+        <br>
+        {% for row in range(rows|length) %}
+        <input type="checkbox" name="sb{{row}}" value="{{rows[row][1]}}">
+        <label>{{rows[row][0]}} ({{rows[row][1]}})</label>
+        <label> Lecturer </label>
+            <select name="fac{{row}}">
+                {% for f in fac[row] %}
+                <option value="{{f[1]}}">{{f[0]}}</option>
+                {% endfor %}
+            </select>
+
+
+        <br><br>
+        {% endfor %}
+        <input type="reset" value="Reset" class="submit">
+        <input type="submit" value="Submit" class="submit">
+
+
+</form>
+<br>
+<a href="backtoHome"><button>Back</button></a>
+</center>
+</div>
+</body>
+</html>

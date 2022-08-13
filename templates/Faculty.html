@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty Time Table</title>
+</head>
+
+<style>
+
+    button,.submit{
+        background-color:skyblue;
+        color:black;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 10%;
+        opacity: 0.9;
+        border-radius:20px;
+    }
+
+    button,.submit:hover {
+        opacity: 1;
+    }
+
+    .b1{
+        border:6px solid black;
+        border-radius:20px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+</style>
+
+
+<body><br><br><br>
+<div class="b1">
+<center>
+<form action="/getfacultyTT" method="POST">
+
+  <h2>Please select your Name:</h2>
+  {% for f in range(fac|length) %}
+  <input type="radio" value="{{fac[f][1]}}" name="fac" required>
+  <label>{{fac[f][0]}} ({{fac[f][1]}})</label>
+    <br>
+    {% endfor %}
+    <br>
+
+  <input type="submit" value="Timetable" class="submit">
+
+</form>
+
+<a href="backtoHome"><button class="submit">Back</button></a>
+
+</center>
+</div>
+</body>
+</html>

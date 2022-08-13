@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture Hall Time Table</title>
+</head>
+
+<style>
+
+    .submit{
+        background-color:skyblue;
+        color:black;
+        padding: 18px 8px;
+        margin: 7px 0;
+        border: none;
+        cursor: pointer;
+        width: 10%;
+        opacity: 0.9;
+        border-radius:20px;
+    }
+
+    .submit:hover {
+        opacity: 1;
+    }
+
+    .b1{
+        border:6px solid black;
+        border-radius:20px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+</style>
+
+<body><br><br><br>
+<div class="b1">
+<center>
+
+<form action="getlectureroom" method="post">
+
+  <h1>Please select your Lecture Hall:</h1>
+
+  <input type="radio" value="h001" name="LH">
+  <label>LectureHall-1</label>
+  <input type="radio" value="h002" name="LH">
+  <label>LectureHall-2</label>
+  <input type="radio" value="h003" name="LH">
+  <label>LectureHall-3</label>
+  <input type="radio" value="h004" name="LH">
+  <label>LectureHall-4</label>
+  <input type="radio" value="h005" name="LH">
+  <label>LectureHall-5</label><br><br>
+
+  <input type="submit" value="Get Time table" class="submit">
+
+</form>
+
+<a href="backtoHome"><button class="submit">Back</button></a>
+
+
+</center>
+</div>
+</body>
+</html>
